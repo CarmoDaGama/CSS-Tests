@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Base</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            padding: 8px;
+        }
+
+        article span {
+            background-color: purple;
+            color: white;
+        }
+        article, span {
+            padding: 8px;
+            margin: 1px;
+            border-radius: 4px;
+        }
+        .purple span {
+            background-color: black;
+            
+        }
+        .green{
+            background-color: hsl(110, 100%, 73%);
+        }
+        .purple {
+            background-color: hsl(290, 100%, 84%);
+            
+        }
+        article {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+        <article class="purple">
+            <span>First</span>
+            <span>Second</span>
+            <span>Third</span>
+        </article>
+        <article class="green">
+            <span>A</span>
+            <span>B</span>
+            <span>C</span>
+        </article>
+</body>
+</html>
