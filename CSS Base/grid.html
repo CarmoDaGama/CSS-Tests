@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID</title>
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+        }
+        .container{
+            display: grid; 
+            grid-template-columns: 200px 1fr 200px;
+            grid-template-rows: 20% 1fr 10%;    
+            grid-template-areas: 
+            'header header header'
+            'purple goiaba goiaba'
+            'limao limao limao';       
+        }
+
+        header{
+            background-color: aqua;
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-area: header;
+        }
+        main {
+            background-color: blueviolet;
+            grid-area: goiaba;
+        }
+        aside{
+            background-color: palevioletred;
+            grid-column: 2/4;
+            grid-area: purple;
+            
+        }
+        footer {
+            background-color: greenyellow;
+            grid-column: 1/4;
+            grid-area: limao;
+        }
+    </style>
+</head>
+<body class="container">
+    <header>header</header>
+    <main>main</main>
+    <aside>aside</aside>
+    <footer>footer</footer>
+</body>
+</html>
