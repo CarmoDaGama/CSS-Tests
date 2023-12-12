@@ -3,7 +3,26 @@
     padding: 0;
     box-sizing: border-box;
 }
+/*To Change the Scroll */
+/*Firefox */
+* {
+    scrollbar-width: 12px;
+    scrollbar-color: #5a5a5a #9a9a9a;
+}
 
+/*Chrome, Edge And Safari */
+::-webkit-scrollbar {
+    width: 12px;
+}
+*::-webkit-scrollbar-track {
+    background: #9a9a9a;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #5a5a5a;
+    border-radius: 20px;
+    border: 3px solid #9a9a9a;
+}
 body {
     display: flex;
     margin: 3px;
@@ -19,7 +38,6 @@ header, nav, main, aside, footer{
 
 header {
     flex: 1 1 100vw;
-    height: 100px;
 }
 
 header #logo {
@@ -37,7 +55,6 @@ header #logo {
 }
 nav {
     flex: 1 1 100vw;
-    height: 100px;
     align-items: center;
     justify-content: flex-end;
 }
@@ -47,8 +64,14 @@ nav a  {
 }
 main {
     flex: 1 1 500px;
-    height: calc(100vh - 224px);
-
+    flex-wrap: wrap;
+    overflow: auto;
+}
+main section {
+    width: 100%;
+    margin: 10px;
+    background: linear-gradient(#9a9a9a, #5a5a5a, #1a1a1a);
+    height: 2000px;
 }
 aside{
     flex: 1 1 200px;
@@ -56,7 +79,6 @@ aside{
 }
 footer {
     flex: 1 1 100vw;
-    height: 100px;
 }
 
 a {
@@ -65,13 +87,19 @@ a {
 }
 
 @media only screen and (max-width: 923px){
+    header {
+        order: 0;
+    }
     main{
-        height: calc(100vh - 330px);
+        order: 1;
     }
 
     aside {
         flex: 1 1 100vw;
-        height: 100px;
+        order: 2;
+    }
+    footer {
+        order: 3;
     }
 }
 
@@ -94,7 +122,6 @@ a {
         position: fixed;
         flex-direction: column;
         width: 100vw;
-        height: 100vh;
         background: rgba(255, 255, 255, 0.8);
         align-items: center;
         justify-content: center;
