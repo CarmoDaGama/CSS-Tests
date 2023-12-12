@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absolute And Relative</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;            
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .box-one {
+            background: cyan;
+        }
+        .box-two {
+            background: yellow;
+            position: absolute;
+            opacity: 0.9;
+            top: 50px;
+            left: 50px;
+        }
+        .container {
+            width: 300px;
+            margin-top: 100px;
+            margin-left: 100px;
+            background: lightcoral;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <p>Hey</p>
+    <div class="box box-two">B2</div>
+    <div class="container">
+        <p>Hello</p>
+        <div class="box box-one">B1</div>
+        <div class="box box-two">B2</div>
+        <p>World!</p>
+        <p>Hello again</p>
+    </div>
+    <p>H</p>
+</body>
+</html>
